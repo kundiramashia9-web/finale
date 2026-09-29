@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact &amp; Bookings · Alabaster Health &amp; Aesthetics</title>
+    <meta name="description" content="Contact Alabaster Health & Aesthetics or book appointments across our Bedfordview, Benoni, Pretoria, and Polokwane branches." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+    <header class="header" id="header">
+        <div class="container header__inner">
+            <a href="index.html" class="logo">
+                <img src="image/logo.jpeg" alt="Alabaster Health & Aesthetics" class="logo__image" />
+                <div class="logo__text-group">
+                    <span class="logo__text">ALABASTER <span>✦</span></span>
+                    <span class="logo__sub">Health &amp; Aesthetics</span>
+                </div>
+            </a>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                <span class="nav-toggle__bar"></span>
+                <span class="nav-toggle__bar"></span>
+                <span class="nav-toggle__bar"></span>
+            </button>
+            <nav class="nav" id="nav">
+                <ul class="nav__list">
+                    <li><a href="index.html" class="nav__link">Home</a></li>
+                    <li><a href="about.html" class="nav__link">About</a></li>
+                    <li><a href="services.html" class="nav__link">Services</a></li>
+                    <li><a href="products.html" class="nav__link">Products</a></li>
+                    <li><a href="Blog.html" class="nav__link">Blog</a></li>
+                    <li><a href="Bookings.html" class="nav__link">Bookings</a></li>
+                    <li><a href="training.html" class="nav__link">Training</a></li>
+                    <li><a href="courses.html" class="nav__link">Courses</a></li>
+                    <li><a href="contact.html" class="nav__link active">Contact</a></li>
+                </ul>
+                <div class="header__actions">
+                    <button class="cart-toggle" id="cartToggle" aria-label="Open cart">
+                        <i class="fas fa-shopping-bag"></i>
+                        <span class="cart-count" style="display:none;">0</span>
+                    </button>
+                    <a href="Bookings.html" class="btn btn--whatsapp btn--sm nav__cta"><i class="fas fa-calendar-check"></i> Book Now</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <div class="cart-overlay" id="cartOverlay"></div>
+    <aside class="cart-drawer" id="cartDrawer" aria-label="Shopping cart">
+        <div class="cart-drawer__header">
+            <h3><i class="fas fa-shopping-bag"></i> Your Cart</h3>
+            <button class="cart-drawer__close" id="cartClose" aria-label="Close cart"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="cart-drawer__items"></div>
+        <div class="cart-drawer__footer">
+            <div class="cart-drawer__total"><span>Total</span><strong class="cart-drawer__total-amount">R0</strong></div>
+            <button class="btn btn--gold cart-drawer__checkout" style="width:100%;"><i class="fas fa-lock"></i> Proceed To Checkout</button>
+            <p class="cart-drawer__note"><i class="fas fa-info-circle"></i> Secure payment on the next page.</p>
+        </div>
+    </aside>
+
+    <section style="background: radial-gradient(circle at 75% 25%, #10294e 0%, var(--navy) 100%); padding: 130px 0 60px; color: var(--white); text-align: center;">
+        <div class="container">
+            <span class="section-heading__tag" style="background: rgba(212,175,55,0.2); color: var(--gold-light);">✦ We Are Here For You</span>
+            <h1 class="section-heading__title" style="color: var(--white); margin-top: 12px;">Get In Touch &amp; <span>Book Your Session</span></h1>
+            <p class="section-heading__text" style="color: rgba(255,255,255,0.8); max-width: 680px; margin: 0 auto;">Connect directly with our branch managers, schedule a consultation, or request training details via WhatsApp and phone.</p>
+        </div>
+    </section>
+
+    <section class="page-section">
+        <div class="container">
+            <div class="contact__grid" style="margin-bottom: 50px;">
+                <div class="contact__card">
+                    <i class="fab fa-whatsapp" style="color: #25d366;"></i>
+                    <h3>WhatsApp Direct</h3>
+                    <p>Instant responses for appointments, package deals, and queries.</p>
+                    <p><strong>081 309 4084</strong></p>
+                    <a href="https://wa.me/27813094084" target="_blank" class="btn btn--whatsapp" style="margin-top: 16px;"><i class="fab fa-whatsapp"></i> Chat On WhatsApp</a>
+                </div>
+                <div class="contact__card">
+                    <i class="fas fa-phone-alt"></i>
+                    <h3>Call Our Branches</h3>
+                    <p><strong>Main / Bedfordview:</strong> <a href="tel:0813094084">081 309 4084</a></p>
+                    <p><strong>Benoni Campus:</strong> <a href="tel:0760426155">076 042 6155</a></p>
+                    <p><strong>Pretoria Hub:</strong> <a href="tel:0670321210">067 032 1210</a></p>
+                    <a href="tel:0813094084" class="btn btn--primary" style="margin-top: 16px;"><i class="fas fa-phone"></i> Call Main Line</a>
+                </div>
+                <div class="contact__card">
+                    <i class="fas fa-envelope-open-text"></i>
+                    <h3>Email &amp; Social</h3>
+                    <p><strong>Email:</strong> info@alabasterclinic.com</p>
+                    <p><strong>TikTok:</strong> @alabaster_health_aesthetics</p>
+                    <p><strong>Instagram:</strong> @alabaster_health_aesthetics</p>
+                    <a href="mailto:info@alabasterclinic.com" class="btn btn--outline" style="margin-top: 16px; color: var(--navy); border-color: var(--navy);"><i class="fas fa-envelope"></i> Send An Email</a>
+                </div>
+            </div>
+
+            <div class="map-section-wrap" id="mapSection">
+                <div class="section-heading" style="margin-bottom: 22px;">
+                    <span class="section-heading__tag">✦ Live Clinic Navigation</span>
+                    <h2 class="section-heading__title">Our 4 Branches on the <span>Interactive Map</span></h2>
+                    <p class="section-heading__text">Explore our clinic locations across Gauteng and Limpopo. Click any branch pin on the map or tap a branch button below to get instant Google Maps turn-by-turn navigation straight to that clinic.</p>
+                </div>
+                <div class="map-branch-bar">
+                    <button type="button" class="map-branch-btn active" data-branch="all" onclick="viewAllBranchesOnMap()"><i class="fas fa-globe"></i> All 4 Branches</button>
+                    <button type="button" class="map-branch-btn" data-branch="bedfordview" onclick="focusBranchOnMap('bedfordview')"><i class="fas fa-gem gold"></i> Bedfordview (12 Nicol Rd)</button>
+                    <button type="button" class="map-branch-btn" data-branch="benoni" onclick="focusBranchOnMap('benoni')"><i class="fas fa-building-columns gold"></i> Benoni Central &amp; College</button>
+                    <button type="button" class="map-branch-btn" data-branch="pretoria" onclick="focusBranchOnMap('pretoria')"><i class="fas fa-spa gold"></i> Pretoria Hub (Menlyn)</button>
+                    <button type="button" class="map-branch-btn" data-branch="polokwane" onclick="focusBranchOnMap('polokwane')"><i class="fas fa-syringe gold"></i> Polokwane (CBD)</button>
+                </div>
+                <div id="alabasterBranchesMap" class="alabaster-map-container"></div>
+            </div>
+
+            <div class="section-heading" style="margin-top: 40px;">
+                <span class="section-heading__tag">Physical Branches</span>
+                <h2 class="section-heading__title">Visit An <span>Alabaster Clinic</span></h2>
+                <p class="section-heading__text">Step into our soothing midnight navy &amp; gold aesthetic spaces. Tap "Take Me There" for instant GPS navigation.</p>
+            </div>
+
+            <div class="locations__grid">
+                <div class="location-card">
+                    <div>
+                        <span class="location-card__badge">✦ New Branch</span>
+                        <h3>Bedfordview Clinic</h3>
+                        <p><i class="fas fa-map-marker-alt gold"></i> 12 Nicol Road, Bedfordview, Johannesburg</p>
+                        <p><i class="fas fa-clock gold"></i> Mon - Sat: 08:30 – 17:30</p>
+                        <p><i class="fas fa-phone-alt gold"></i> Direct: <a href="tel:0813094084" style="color:var(--navy); font-weight:700;">081 309 4084</a></p>
+                        <p><i class="fab fa-whatsapp" style="color:#25d366;"></i> WhatsApp: <a href="https://wa.me/27813094084" target="_blank" style="color:#25d366; font-weight:700;">081 309 4084</a></p>
+                        <p><i class="fas fa-wand-magic-sparkles gold"></i> Opening Specials Active!</p>
+                    </div>
+                    <div class="location-card__actions">
+                        <a href="https://www.google.com/maps/dir/?api=1&destination=12+Nicol+Road+Bedfordview+Germiston" target="_blank" rel="noopener" class="btn btn--gold btn--sm"><i class="fas fa-location-arrow"></i> Take Me There</a>
+                        <button type="button" class="btn btn--outline btn--sm" onclick="focusBranchOnMap('bedfordview')"><i class="fas fa-map-pin"></i> View on Map</button>
+                        <a href="Bookings.html?branch=bedfordview" class="btn btn--whatsapp btn--sm"><i class="fas fa-calendar-check"></i> Book A Slot</a>
+                        <a href="tel:0813094084" class="btn btn--primary btn--sm"><i class="fas fa-phone-alt"></i> Call Clinic</a>
+                    </div>
+                </div>
+                <div class="location-card">
+                    <div>
+                        <span class="location-card__badge">✦ Head Office &amp; College</span>
+                        <h3>Benoni Clinic &amp; College</h3>
+                        <p><i class="fas fa-map-marker-alt gold"></i> 65 Ampthill Avenue, Benoni Central</p>
+                        <p><i class="fas fa-clock gold"></i> Mon - Sat: 08:00 – 17:00</p>
+                        <p><i class="fas fa-phone-alt gold"></i> Direct: <a href="tel:0760426155" style="color:var(--navy); font-weight:700;">076 042 6155</a></p>
+                        <p><i class="fab fa-whatsapp" style="color:#25d366;"></i> WhatsApp: <a href="https://wa.me/27760426155" target="_blank" style="color:#25d366; font-weight:700;">076 042 6155</a></p>
+                        <p><i class="fas fa-graduation-cap gold"></i> Full Training Academy</p>
+                    </div>
+                    <div class="location-card__actions">
+                        <a href="https://www.google.com/maps/dir/?api=1&destination=65+Ampthill+Avenue+Benoni+Central" target="_blank" rel="noopener" class="btn btn--gold btn--sm"><i class="fas fa-location-arrow"></i> Take Me There</a>
+                        <button type="button" class="btn btn--outline btn--sm" onclick="focusBranchOnMap('benoni')"><i class="fas fa-map-pin"></i> View on Map</button>
+                        <a href="Bookings.html?branch=benoni" class="btn btn--whatsapp btn--sm"><i class="fas fa-calendar-check"></i> Book A Slot</a>
+                        <a href="tel:0760426155" class="btn btn--primary btn--sm"><i class="fas fa-phone-alt"></i> Call Clinic</a>
+                    </div>
+                </div>
+                <div class="location-card">
+                    <div>
+                        <span class="location-card__badge">✦ Aesthetics &amp; Slimming Hub</span>
+                        <h3>Pretoria Hub</h3>
+                        <p><i class="fas fa-map-marker-alt gold"></i> Menlyn / Hatfield Medical Precinct, Pretoria</p>
+                        <p><i class="fas fa-clock gold"></i> Mon - Sat: 08:30 – 17:00</p>
+                        <p><i class="fas fa-phone-alt gold"></i> Direct: <a href="tel:0670321210" style="color:var(--navy); font-weight:700;">067 032 1210</a></p>
+                        <p><i class="fab fa-whatsapp" style="color:#25d366;"></i> WhatsApp: <a href="https://wa.me/27670321210" target="_blank" style="color:#25d366; font-weight:700;">067 032 1210</a></p>
+                        <p><i class="fas fa-spa gold"></i> Aesthetics &amp; Slimming</p>
+                    </div>
+                    <div class="location-card__actions">
+                        <a href="https://www.google.com/maps/dir/?api=1&destination=Menlyn+Hatfield+Medical+Precinct+Pretoria" target="_blank" rel="noopener" class="btn btn--gold btn--sm"><i class="fas fa-location-arrow"></i> Take Me There</a>
+                        <button type="button" class="btn btn--outline btn--sm" onclick="focusBranchOnMap('pretoria')"><i class="fas fa-map-pin"></i> View on Map</button>
+                        <a href="Bookings.html?branch=pretoria" class="btn btn--whatsapp btn--sm"><i class="fas fa-calendar-check"></i> Book A Slot</a>
+                        <a href="tel:0670321210" class="btn btn--primary btn--sm"><i class="fas fa-phone-alt"></i> Call Clinic</a>
+                    </div>
+                </div>
+                <div class="location-card">
+                    <div>
+                        <span class="location-card__badge">✦ Limpopo Province Branch</span>
+                        <h3>Polokwane Clinic</h3>
+                        <p><i class="fas fa-map-marker-alt gold"></i> Central Business District, Polokwane</p>
+                        <p><i class="fas fa-clock gold"></i> Tue - Sat: 09:00 – 16:30</p>
+                        <p><i class="fas fa-phone-alt gold"></i> Direct: <a href="tel:0813094084" style="color:var(--navy); font-weight:700;">081 309 4084</a></p>
+                        <p><i class="fab fa-whatsapp" style="color:#25d366;"></i> WhatsApp: <a href="https://wa.me/27813094084" target="_blank" style="color:#25d366; font-weight:700;">081 309 4084</a></p>
+                        <p><i class="fas fa-syringe gold"></i> Lemon Bottle &amp; Slimming</p>
+                    </div>
+                    <div class="location-card__actions">
+                        <a href="https://www.google.com/maps/dir/?api=1&destination=Central+Business+District+Polokwane" target="_blank" rel="noopener" class="btn btn--gold btn--sm"><i class="fas fa-location-arrow"></i> Take Me There</a>
+                        <button type="button" class="btn btn--outline btn--sm" onclick="focusBranchOnMap('polokwane')"><i class="fas fa-map-pin"></i> View on Map</button>
+                        <a href="Bookings.html?branch=polokwane" class="btn btn--whatsapp btn--sm"><i class="fas fa-calendar-check"></i> Book A Slot</a>
+                        <a href="tel:0813094084" class="btn btn--primary btn--sm"><i class="fas fa-phone-alt"></i> Call Clinic</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__locations-bar">✦ Bedfordview · Benoni · Pretoria · Polokwane · Certified Practitioners · WhatsApp: 081 309 4084 ✦</div>
+            <div class="footer__inner">
+                <div class="footer__brand">
+                    <img src="image/logo.jpeg" alt="Alabaster Health & Aesthetics" class="footer__logo-image" />
+                    <div><div class="footer__brand-text">ALABASTER</div><p>Health &amp; Aesthetics — Premium treatments, real results.</p></div>
+                </div>
+                <div class="footer__links">
+                    <a href="index.html">Home</a><a href="about.html">About</a><a href="services.html">Services</a><a href="products.html">Products</a><a href="Blog.html">Blog</a><a href="Bookings.html">Bookings</a><a href="training.html">Training</a><a href="courses.html">Courses</a><a href="contact.html">Contact</a>
+                </div>
+                <div class="footer__social">
+                    <a href="https://wa.me/27813094084" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    <a href="https://www.tiktok.com/@alabaster_health_aesthetics" target="_blank" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                    <a href="https://www.instagram.com/alabaster_health_aesthetics" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.facebook.com" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p>&copy; 2026 Alabaster Health &amp; Aesthetics. All rights reserved.</p>
+                <p class="footer__ai">Alabaster Clinic &amp; Training College · Founded by Murendeni Mudau</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    <script src="js/cart.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
