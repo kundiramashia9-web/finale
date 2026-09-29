@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Us · Alabaster Health &amp; Aesthetics</title>
+    <meta name="description" content="Learn about Alabaster Health & Aesthetics — founded by Murendeni Mudau, offering expert aesthetic treatments and accredited training across Bedfordview, Benoni, Pretoria and Polokwane." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+    <header class="header" id="header">
+        <div class="container header__inner">
+            <a href="index.html" class="logo">
+                <img src="image/logo.jpeg" alt="Alabaster Health & Aesthetics" class="logo__image" />
+                <div class="logo__text-group">
+                    <span class="logo__text">ALABASTER <span>✦</span></span>
+                    <span class="logo__sub">Health &amp; Aesthetics</span>
+                </div>
+            </a>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                <span class="nav-toggle__bar"></span>
+                <span class="nav-toggle__bar"></span>
+                <span class="nav-toggle__bar"></span>
+            </button>
+            <nav class="nav" id="nav">
+                <ul class="nav__list">
+                    <li><a href="index.html" class="nav__link">Home</a></li>
+                    <li><a href="about.html" class="nav__link active">About</a></li>
+                    <li><a href="services.html" class="nav__link">Services</a></li>
+                    <li><a href="products.html" class="nav__link">Products</a></li>
+                    <li><a href="Blog.html" class="nav__link">Blog</a></li>
+                    <li><a href="Bookings.html" class="nav__link">Bookings</a></li>
+                    <li><a href="rewards.html" class="nav__link">Rewards</a></li>
+                    <li><a href="contact.html" class="nav__link">Contact</a></li>
+                </ul>
+                <div class="header__actions">
+                    <button class="cart-toggle" id="cartToggle" aria-label="Open cart">
+                        <i class="fas fa-shopping-bag"></i>
+                        <span class="cart-count" style="display:none;">0</span>
+                    </button>
+                    <a href="Bookings.html" class="btn btn--whatsapp btn--sm nav__cta"><i class="fas fa-calendar-check"></i> Book Now</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <div class="cart-overlay" id="cartOverlay"></div>
+    <aside class="cart-drawer" id="cartDrawer" aria-label="Shopping cart">
+        <div class="cart-drawer__header">
+            <h3><i class="fas fa-shopping-bag"></i> Your Cart</h3>
+            <button class="cart-drawer__close" id="cartClose" aria-label="Close cart"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="cart-drawer__items"></div>
+        <div class="cart-drawer__footer">
+            <div class="cart-drawer__total"><span>Total</span><strong class="cart-drawer__total-amount">R0</strong></div>
+            <button class="btn btn--gold cart-drawer__checkout" style="width:100%;"><i class="fas fa-lock"></i> Proceed To Checkout</button>
+            <p class="cart-drawer__note"><i class="fas fa-info-circle"></i> Secure payment on the next page.</p>
+        </div>
+    </aside>
+
+    <section style="background: radial-gradient(circle at 75% 25%, #10294e 0%, var(--navy) 100%); padding: 130px 0 60px; color: var(--white); text-align: center;">
+        <div class="container">
+            <span class="section-heading__tag" style="background: rgba(212,175,55,0.2); color: var(--gold-light);">✦ Our Story</span>
+            <h1 class="section-heading__title" style="color: var(--white); margin-top: 12px;">About <span>Alabaster Health &amp; Aesthetics</span></h1>
+            <p class="section-heading__text" style="color: rgba(255,255,255,0.8); max-width: 720px; margin: 0 auto;">A South African luxury medical aesthetics brand built on professional training, advanced technology, and personalised care — where beauty, health, and wellness come together.</p>
+        </div>
+    </section>
+
+    <section class="page-section">
+        <div class="container">
+            <div class="showcase-banner" style="margin-bottom: 50px;">
+                <div class="showcase-banner__inner">
+                    <div class="showcase-banner__content">
+                        <span class="section-heading__tag">✦ Meet The Founder</span>
+                        <h2 class="showcase-banner__title">Founded By <span>Murendeni Mudau</span></h2>
+                        <p class="showcase-banner__text">Alabaster Health &amp; Aesthetics was founded by Murendeni Mudau, a qualified Somatologist and Beauty Therapist with over 7 years of hands-on experience in the beauty, skin, and aesthetics industry.</p>
+                        <p class="showcase-banner__text">What began as a passion for helping clients feel confident in their own skin has grown into a multi-branch clinic and accredited training college — serving clients and students across Gauteng and Limpopo.</p>
+                        <p class="showcase-banner__text">Under Murendeni's leadership, Alabaster has become a trusted name for advanced non-invasive treatments, authentic Korean Lemon Bottle lipolysis, and industry-accredited aesthetic training.</p>
+                        <div class="showcase-banner__features">
+                            <div class="showcase-banner__feature"><i class="fas fa-award"></i> 7+ Years of Industry Experience</div>
+                            <div class="showcase-banner__feature"><i class="fas fa-graduation-cap"></i> Qualified Somatologist</div>
+                            <div class="showcase-banner__feature"><i class="fas fa-users"></i> 1,500+ Clients Assisted</div>
+                            <div class="showcase-banner__feature"><i class="fas fa-chalkboard-teacher"></i> Accredited Trainer &amp; Educator</div>
+                        </div>
+                        <a href="Bookings.html" class="btn btn--gold"><i class="fas fa-calendar-check"></i> Book A Consultation</a>
+                    </div>
+                    <div class="showcase-banner__media">
+                        <img src="image/clinic-interior.jpg" alt="Alabaster Health & Aesthetics Clinic Interior" loading="lazy" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="about-stats">
+        <div class="container about-stats__inner">
+            <div class="stat"><span class="stat__number">7<span class="gold">+</span></span><span class="stat__label">Years of Excellence</span></div>
+            <div class="stat"><span class="stat__number">1,500<span class="gold">+</span></span><span class="stat__label">Happy Clients</span></div>
+            <div class="stat"><span class="stat__number">25<span class="gold">+</span></span><span class="stat__label">Aesthetic Treatments</span></div>
+            <div class="stat"><span class="stat__number">4</span><span class="stat__label">Prime Clinic Locations</span></div>
+        </div>
+    </section>
+
+    <section class="page-section">
+        <div class="container">
+            <div class="section-heading">
+                <span class="section-heading__tag">✦ What Drives Us</span>
+                <h2 class="section-heading__title">Our Mission, Vision &amp; <span>Core Values</span></h2>
+                <p class="section-heading__text">Every treatment, every class, and every client interaction is guided by these pillars.</p>
+            </div>
+            <div class="services__grid">
+                <div class="service-card"><div><div class="service-card__icon"><i class="fas fa-bullseye"></i></div><h4>Our Mission</h4><p>To provide professional, personalised, and results-driven aesthetic treatments in a safe, welcoming environment — while empowering the next generation of beauty professionals through accredited training.</p></div></div>
+                <div class="service-card"><div><div class="service-card__icon"><i class="fas fa-eye"></i></div><h4>Our Vision</h4><p>To become South Africa's most trusted luxury medical aesthetics brand — known for clinical excellence, authentic products, and compassionate care across every branch.</p></div></div>
+                <div class="service-card"><div><div class="service-card__icon"><i class="fas fa-heart"></i></div><h4>Our Values</h4><p>Integrity, professionalism, client safety, and continuous education. We never compromise on the quality of products, machines, or the care we provide.</p></div></div>
+                <div class="service-card"><div><div class="service-card__icon"><i class="fas fa-shield-alt"></i></div><h4>Safety First</h4><p>All treatments are performed using sterile, certified equipment and authentic products. Every client is assessed before any procedure.</p></div></div>
+                <div class="service-card"><div><div class="service-card__icon"><i class="fas fa-hand-holding-heart"></i></div><h4>Personalised Care</h4><p>No two clients are the same. Every treatment plan is customised to your unique skin, body, and wellness goals — from consultation to aftercare.</p></div></div>
+                <div class="service-card"><div><div class="service-card__icon"><i class="fas fa-star"></i></div><h4>Proven Results</h4><p>We measure success by visible client transformations and long-term satisfaction — not just sales. Our reviews speak for themselves.</p></div></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="page-section" style="background: var(--off-white);">
+        <div class="container">
+            <div class="section-heading">
+                <span class="section-heading__tag">✦ What We Do</span>
+                <h2 class="section-heading__title">Treatments &amp; <span>Training</span></h2>
+                <p class="section-heading__text">From advanced facial therapies to body contouring and industry-accredited aesthetic courses.</p>
+            </div>
+            <div class="training__grid">
+                <div class="training-card"><i class="fas fa-spa"></i><h4>Skin &amp; Aesthetics</h4><p>Dermaplaning, TCA peels, organic algae peels, microneedling, and CO₂ stretchmark reduction.</p></div>
+                <div class="training-card"><i class="fas fa-dumbbell"></i><h4>Body &amp; Slimming</h4><p>Cavitation, EMS, vacuum therapy, G5 massage, lipo laser, and non-surgical body sculpting.</p></div>
+                <div class="training-card"><i class="fas fa-syringe"></i><h4>Weight Loss Injections</h4><p>Authentic Korean Lemon Bottle lipolysis, SEMI, TIRZEP, and RETRA peptide programs.</p></div>
+                <div class="training-card"><i class="fas fa-graduation-cap"></i><h4>Accredited Training</h4><p>Hands-on aesthetic masterclasses with free equipment, live practicals, and certification.</p></div>
+            </div>
+            <div style="text-align:center; margin-top: 40px; display:flex; gap:14px; justify-content:center; flex-wrap:wrap;">
+                <a href="services.html" class="btn btn--gold"><i class="fas fa-wand-magic-sparkles"></i> Explore All Services</a>
+                <a href="training.html" class="btn btn--primary"><i class="fas fa-graduation-cap"></i> View Training Programs</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="page-section page-section--dark">
+        <div class="container">
+            <div class="section-heading">
+                <span class="section-heading__tag">✦ Why Alabaster</span>
+                <h2 class="section-heading__title" style="color: var(--white);">Why Clients <span>Trust Us</span></h2>
+                <p class="section-heading__text">Four reasons thousands of clients and students choose Alabaster every year.</p>
+            </div>
+            <div class="training__grid">
+                <div class="training-card"><i class="fas fa-user-md"></i><h4>Certified Practitioners</h4><p>All treatments are performed by qualified Somatologists and Beauty Therapists with years of clinical experience.</p></div>
+                <div class="training-card"><i class="fas fa-certificate"></i><h4>Authentic Products Only</h4><p>We source 100% authentic Korean Lemon Bottle ampoules and medical-grade skincare — never counterfeits.</p></div>
+                <div class="training-card"><i class="fas fa-microchip"></i><h4>Advanced Technology</h4><p>Hospital-grade cavitation wands, EMS machines, RF devices, and CO₂ lasers across all our branches.</p></div>
+                <div class="training-card"><i class="fas fa-smile"></i><h4>Real Client Results</h4><p>Over 1,500 satisfied clients with measurable, visible transformations and verified 5-star reviews.</p></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="page-section">
+        <div class="container">
+            <div class="section-heading">
+                <span class="section-heading__tag">✦ Our Footprint</span>
+                <h2 class="section-heading__title">Four Prime <span>Clinic Locations</span></h2>
+                <p class="section-heading__text">Serving clients across Gauteng and Limpopo with the same standard of luxury care.</p>
+            </div>
+            <div class="locations__grid">
+                <div class="location-card">
+                    <div>
+                        <span class="location-card__badge">✦ New Branch</span>
+                        <h3>Bedfordview</h3>
+                        <p><i class="fas fa-map-marker-alt gold"></i> 12 Nicol Road, Bedfordview, Johannesburg</p>
+                        <p><i class="fas fa-clock gold"></i> Mon - Sat: 08:30 – 17:30</p>
+                        <p><i class="fas fa-wand-magic-sparkles gold"></i> Opening Specials Active!</p>
+                    </div>
+                    <div class="location-card__actions">
+                        <a href="https://www.google.com/maps/dir/?api=1&destination=12+Nicol+Road+Bedfordview+Germiston" target="_blank" rel="noopener" class="btn btn--gold btn--sm"><i class="fas fa-location-arrow"></i> Take Me There</a>
+                        <a href="Bookings.html?branch=bedfordview" class="btn btn--whatsapp btn--sm"><i class="fas fa-calendar-check"></i> Book A Slot</a>
+                        <a href="tel:0813094084" class="btn btn--primary btn--sm"><i class="fas fa-phone-alt"></i> 081 309 4084</a>
+                    </div>
+                </div>
+                <div class="location-card">
+                    <div>
+                        <span class="location-card__badge">✦ Head Office &amp; College</span>
+                        <h3>Benoni</h3>
+                        <p><i class="fas fa-map-marker-alt gold"></i> 65 Ampthill Avenue, Benoni Central</p>
+                        <p><i class="fas fa-clock gold"></i> Mon - Sat: 08:00 – 17:00</p>
+                        <p><i class="fas fa-graduation-cap gold"></i> Full Training Academy</p>
+                    </div>
+                    <div class="location-card__actions">
+                        <a href="https://www.google.com/maps/dir/?api=1&destination=65+Ampthill+Avenue+Benoni+Central" target="_blank" rel="noopener" class="btn btn--gold btn--sm"><i class="fas fa-location-arrow"></i> Take Me There</a>
+                        <a href="Bookings.html?branch=benoni" class="btn btn--whatsapp btn--sm"><i class="fas fa-calendar-check"></i> Book A Slot</a>
+                        <a href="tel:0760426155" class="btn btn--primary btn--sm"><i class="fas fa-phone-alt"></i> 076 042 6155</a>
+                    </div>
+                </div>
+                <div class="location-card">
+                    <div>
+                        <span class="location-card__badge">✦ Training &amp; Treatments</span>
+                        <h3>Pretoria</h3>
+                        <p><i class="fas fa-map-marker-alt gold"></i> Menlyn / Hatfield Medical Precinct, Pretoria</p>
+                        <p><i class="fas fa-clock gold"></i> Mon - Sat: 08:30 – 17:00</p>
+                        <p><i class="fas fa-spa gold"></i> Aesthetics &amp; Slimming</p>
+                    </div>
+                    <div class="location-card__actions">
+                        <a href="https://www.google.com/maps/dir/?api=1&destination=Menlyn+Hatfield+Medical+Precinct+Pretoria" target="_blank" rel="noopener" class="btn btn--gold btn--sm"><i class="fas fa-location-arrow"></i> Take Me There</a>
+                        <a href="Bookings.html?branch=pretoria" class="btn btn--whatsapp btn--sm"><i class="fas fa-calendar-check"></i> Book A Slot</a>
+                        <a href="tel:0670321210" class="btn btn--primary btn--sm"><i class="fas fa-phone-alt"></i> 067 032 1210</a>
+                    </div>
+                </div>
+                <div class="location-card">
+                    <div>
+                        <span class="location-card__badge">✦ Limpopo Branch</span>
+                        <h3>Polokwane</h3>
+                        <p><i class="fas fa-map-marker-alt gold"></i> Central Business District, Polokwane</p>
+                        <p><i class="fas fa-clock gold"></i> Tue - Sat: 09:00 – 16:30</p>
+                        <p><i class="fas fa-syringe gold"></i> Lemon Bottle &amp; Slimming</p>
+                    </div>
+                    <div class="location-card__actions">
+                        <a href="https://www.google.com/maps/dir/?api=1&destination=Central+Business+District+Polokwane" target="_blank" rel="noopener" class="btn btn--gold btn--sm"><i class="fas fa-location-arrow"></i> Take Me There</a>
+                        <a href="Bookings.html?branch=polokwane" class="btn btn--whatsapp btn--sm"><i class="fas fa-calendar-check"></i> Book A Slot</a>
+                        <a href="tel:0813094084" class="btn btn--primary btn--sm"><i class="fas fa-phone-alt"></i> 081 309 4084</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="page-section page-section--dark" style="padding: 60px 0;">
+        <div class="container" style="text-align:center;">
+            <h2 class="section-heading__title" style="color: var(--white); margin-bottom: 12px;">Ready To Experience <span>Alabaster?</span></h2>
+            <p style="color: rgba(255,255,255,0.8); max-width: 600px; margin: 0 auto 28px;">Book a free 15-minute consultation at any of our 4 branches. We'll assess your skin, body, and goals — then build a personalised treatment plan just for you.</p>
+            <div style="display:flex; gap:14px; justify-content:center; flex-wrap:wrap;">
+                <a href="Bookings.html" class="btn btn--gold"><i class="fas fa-calendar-check"></i> Book Free Consultation</a>
+                <a href="https://wa.me/27813094084?text=Hi%2C%20I%20would%20like%20to%20learn%20more%20about%20Alabaster" target="_blank" rel="noopener" class="btn btn--whatsapp"><i class="fab fa-whatsapp"></i> Ask On WhatsApp</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__locations-bar">✦ Bedfordview · Benoni · Pretoria · Polokwane · Certified Practitioners · WhatsApp: 081 309 4084 ✦</div>
+
+            <div class="newsletter-section">
+                <div class="container">
+                    <div class="newsletter-inner">
+                        <div class="newsletter-text">
+                            <h3>Get <span>10% Off</span> Your First Order</h3>
+                            <p>Join the Alabaster family and get exclusive specials, new product drops, and treatment tips — straight to your inbox.</p>
+                        </div>
+                        <form class="newsletter-form">
+                            <input type="email" placeholder="Your email address" required />
+                            <button type="submit"><i class="fas fa-paper-plane"></i> Subscribe</button>
+                            <div class="newsletter-msg"></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer__inner">
+                <div class="footer__brand">
+                    <img src="image/logo.jpeg" alt="Alabaster Health & Aesthetics" class="footer__logo-image" />
+                    <div><div class="footer__brand-text">ALABASTER</div><p>Health &amp; Aesthetics — Premium treatments, real results.</p></div>
+                </div>
+                <div class="footer__links">
+                    <a href="index.html">Home</a><a href="about.html">About</a><a href="services.html">Services</a><a href="products.html">Products</a><a href="Blog.html">Blog</a><a href="Bookings.html">Bookings</a><a href="rewards.html">Rewards</a><a href="contact.html">Contact</a>
+                </div>
+                <div class="footer__social">
+                    <a href="https://wa.me/27813094084" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    <a href="https://www.tiktok.com/@alabaster_health_aesthetics" target="_blank" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                    <a href="https://www.instagram.com/alabaster_health_aesthetics" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.facebook.com" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p>&copy; 2026 Alabaster Health &amp; Aesthetics. All rights reserved.</p>
+                <p class="footer__ai">Alabaster Clinic &amp; Training College · Founded by Murendeni Mudau</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/cart.js"></script>
+    <script src="js/features.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

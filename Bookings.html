@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Book An Appointment · Alabaster Health &amp; Aesthetics</title>
+    <meta name="description" content="Book your aesthetic treatment at Alabaster Health & Aesthetics. Select your branch, pick a date and time slot, and secure your appointment with Dr Randy Mudau." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+    <header class="header" id="header">
+        <div class="container header__inner">
+            <a href="index.html" class="logo">
+                <img src="image/logo.jpeg" alt="Alabaster Health & Aesthetics" class="logo__image" />
+                <div class="logo__text-group">
+                    <span class="logo__text">ALABASTER <span>✦</span></span>
+                    <span class="logo__sub">Health &amp; Aesthetics</span>
+                </div>
+            </a>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                <span class="nav-toggle__bar"></span>
+                <span class="nav-toggle__bar"></span>
+                <span class="nav-toggle__bar"></span>
+            </button>
+            <nav class="nav" id="nav">
+                <ul class="nav__list">
+                    <li><a href="index.html" class="nav__link">Home</a></li>
+                    <li><a href="about.html" class="nav__link">About</a></li>
+                    <li><a href="services.html" class="nav__link">Services</a></li>
+                    <li><a href="products.html" class="nav__link">Products</a></li>
+                    <li><a href="Blog.html" class="nav__link">Blog</a></li>
+                    <li><a href="Bookings.html" class="nav__link active">Bookings</a></li>
+                    <li><a href="rewards.html" class="nav__link">Rewards</a></li>
+                    <li><a href="contact.html" class="nav__link">Contact</a></li>
+                </ul>
+                <div class="header__actions">
+                    <button class="cart-toggle" id="cartToggle" aria-label="Open cart">
+                        <i class="fas fa-shopping-bag"></i>
+                        <span class="cart-count" style="display:none;">0</span>
+                    </button>
+                    <a href="#locationSection" class="btn btn--whatsapp btn--sm nav__cta"><i class="fas fa-calendar-check"></i> Book Now</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <div class="cart-overlay" id="cartOverlay"></div>
+    <aside class="cart-drawer" id="cartDrawer" aria-label="Shopping cart">
+        <div class="cart-drawer__header">
+            <h3><i class="fas fa-shopping-bag"></i> Your Cart</h3>
+            <button class="cart-drawer__close" id="cartClose" aria-label="Close cart"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="cart-drawer__items"></div>
+        <div class="cart-drawer__footer">
+            <div class="cart-drawer__total"><span>Total</span><strong class="cart-drawer__total-amount">R0</strong></div>
+            <button class="btn btn--gold cart-drawer__checkout" style="width:100%;"><i class="fas fa-lock"></i> Proceed To Checkout</button>
+            <p class="cart-drawer__note"><i class="fas fa-info-circle"></i> Secure payment on the next page.</p>
+        </div>
+    </aside>
+
+    <section class="booking-hero">
+        <div class="container">
+            <span class="section-heading__tag" style="background: rgba(212,175,55,0.2); color: var(--gold-light);">Online Booking System</span>
+            <h1 class="section-heading__title" style="color: var(--white); margin-top: 12px;">Book Your Appointment With <span>One of Our Alabaster Branches</span></h1>
+            <p class="section-heading__text" style="color: rgba(255,255,255,0.85); max-width: 720px; margin: 0 auto;">Select a location below, pick a date and time, and secure your slot with a R200 booking fee. Dr Randy Mudau travels to whichever branch you choose.</p>
+        </div>
+    </section>
+
+    <div class="booking-stepper-bar">
+        <div class="container">
+            <div class="booking-stepper">
+                <div class="booking-step-pill active" id="pillStep1"><span class="step-circle">1</span><span>Location</span></div>
+                <i class="fas fa-chevron-right booking-step-arrow"></i>
+                <div class="booking-step-pill" id="pillStep2"><span class="step-circle">2</span><span>Date &amp; Time</span></div>
+                <i class="fas fa-chevron-right booking-step-arrow"></i>
+                <div class="booking-step-pill" id="pillStep3"><span class="step-circle">3</span><span>Your Details</span></div>
+                <i class="fas fa-chevron-right booking-step-arrow"></i>
+                <div class="booking-step-pill" id="pillStep4"><span class="step-circle">4</span><span>Pay R200</span></div>
+            </div>
+        </div>
+    </div>
+
+    <section class="booking-section" id="locationSection">
+        <div class="container">
+            <div class="booking-section-heading">
+                <h2><i class="fas fa-map-location-dot gold"></i> Select a Location</h2>
+                <p>Dr Randy Mudau will travel to the branch you choose below.</p>
+            </div>
+            <div class="booking-provider-wrap">
+                <h3 class="booking-subheading">Your Practitioner:</h3>
+                <div class="provider-card">
+                    <div class="provider-card__avatar">
+                        <img src="image/randy-mudau.jpg" alt="Dr Randy Mudau" onerror="this.onerror=null; this.style.display='none'; this.parentElement.innerHTML='<i class=\'fas fa-user-md\'></i>';" />
+                    </div>
+                    <div class="provider-card__info">
+                        <h4>Dr Randy Mudau</h4>
+                        <p><i class="fas fa-stethoscope gold"></i> Lead Aesthetic Practitioner</p>
+                        <span class="provider-card__badge"><i class="fas fa-check-circle"></i> Travels to all branches</span>
+                    </div>
+                </div>
+            </div>
+            <h3 class="booking-subheading" style="margin-top: 32px;">Choose a Branch:</h3>
+            <div class="location-cards-grid" id="locationCardsGrid">
+                <div class="booking-location-card" data-branch="bedfordview" onclick="selectBranch('bedfordview')">
+                    <div class="booking-location-card__badge">New Branch</div>
+                    <h3>Alabaster Bedfordview</h3>
+                    <div class="booking-location-card__contacts">
+                        <a href="tel:0813094084" onclick="event.stopPropagation()"><i class="fas fa-phone-alt"></i> Call: 081 309 4084</a>
+                        <a href="https://wa.me/27813094084" target="_blank" onclick="event.stopPropagation()"><i class="fab fa-whatsapp" style="color:#25d366;"></i> WhatsApp: 081 309 4084</a>
+                    </div>
+                    <p class="booking-location-card__address"><i class="fas fa-map-marker-alt gold"></i> 12 Nicol Road, Bedfordview, Johannesburg, 2007</p>
+                    <button type="button" class="btn-book-location">BOOK</button>
+                </div>
+                <div class="booking-location-card" data-branch="benoni" onclick="selectBranch('benoni')">
+                    <div class="booking-location-card__badge">Head Office &amp; College</div>
+                    <h3>Alabaster Benoni</h3>
+                    <div class="booking-location-card__contacts">
+                        <a href="tel:0760426155" onclick="event.stopPropagation()"><i class="fas fa-phone-alt"></i> Call: 076 042 6155</a>
+                        <a href="https://wa.me/27760426155" target="_blank" onclick="event.stopPropagation()"><i class="fab fa-whatsapp" style="color:#25d366;"></i> WhatsApp: 076 042 6155</a>
+                    </div>
+                    <p class="booking-location-card__address"><i class="fas fa-map-marker-alt gold"></i> 65 Ampthill Avenue, Benoni Central, 1501</p>
+                    <button type="button" class="btn-book-location">BOOK</button>
+                </div>
+                <div class="booking-location-card" data-branch="pretoria" onclick="selectBranch('pretoria')">
+                    <div class="booking-location-card__badge">Aesthetics &amp; Slimming Hub</div>
+                    <h3>Alabaster Pretoria</h3>
+                    <div class="booking-location-card__contacts">
+                        <a href="tel:0670321210" onclick="event.stopPropagation()"><i class="fas fa-phone-alt"></i> Call: 067 032 1210</a>
+                        <a href="https://wa.me/27670321210" target="_blank" onclick="event.stopPropagation()"><i class="fab fa-whatsapp" style="color:#25d366;"></i> WhatsApp: 067 032 1210</a>
+                    </div>
+                    <p class="booking-location-card__address"><i class="fas fa-map-marker-alt gold"></i> Suite 9, Menlyn Maine, Aramist Ave, Waterkloof Glen, Pretoria, 0181</p>
+                    <button type="button" class="btn-book-location">BOOK</button>
+                </div>
+                <div class="booking-location-card" data-branch="polokwane" onclick="selectBranch('polokwane')">
+                    <div class="booking-location-card__badge">Limpopo Branch</div>
+                    <h3>Alabaster Polokwane</h3>
+                    <div class="booking-location-card__contacts">
+                        <a href="tel:0813094084" onclick="event.stopPropagation()"><i class="fas fa-phone-alt"></i> Call: 081 309 4084</a>
+                        <a href="https://wa.me/27813094084" target="_blank" onclick="event.stopPropagation()"><i class="fab fa-whatsapp" style="color:#25d366;"></i> WhatsApp: 081 309 4084</a>
+                    </div>
+                    <p class="booking-location-card__address"><i class="fas fa-map-marker-alt gold"></i> Central Business District, Polokwane, 0699</p>
+                    <button type="button" class="btn-book-location">BOOK</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="booking-section booking-section--alt" id="datetimeSection" style="display: none;">
+        <div class="container">
+            <div class="booking-section-heading">
+                <h2><i class="fas fa-calendar-check gold"></i> Select Date and Time</h2>
+                <p>Showing availability for <strong id="selectedBranchLabel">Bedfordview</strong> with Dr Randy Mudau.</p>
+            </div>
+            <div class="booking-calendar-wrap">
+                <div class="booking-calendar-card">
+                    <div class="booking-calendar-legend">
+                        <span><i class="fas fa-circle" style="color:#14b8a6;"></i> Available</span>
+                        <span><i class="fas fa-circle" style="color:#d1d5db;"></i> Unavailable</span>
+                        <span><i class="fas fa-circle" style="color:#061325;"></i> Selected</span>
+                    </div>
+                    <div class="booking-calendar-header">
+                        <button type="button" class="cal-nav-btn" onclick="navigateMonth(-1)" aria-label="Previous month"><i class="fas fa-chevron-left"></i></button>
+                        <h3 id="calMonthYear">September 2026</h3>
+                        <button type="button" class="cal-nav-btn" onclick="navigateMonth(1)" aria-label="Next month"><i class="fas fa-chevron-right"></i></button>
+                    </div>
+                    <div class="booking-calendar-days"><span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span><span>Sun</span></div>
+                    <div class="booking-calendar-grid" id="calendarGrid"></div>
+                    <button type="button" class="btn-find-availability" onclick="scrollToTimeSlots()">FIND AVAILABILITY</button>
+                </div>
+                <div class="booking-timeslots-card" id="timeslotsCard" style="display: none;">
+                    <h3 class="timeslots-heading"><i class="fas fa-clock gold"></i> Available Slots for <span id="slotDateLabel">—</span></h3>
+                    <p class="timeslots-sub">All times shown in SAST (South African Standard Time)</p>
+                    <div class="slots-group"><span class="slots-group__label"><i class="fas fa-sun gold"></i> Morning</span><div class="slots-pill-grid" id="morningSlots"></div></div>
+                    <div class="slots-group"><span class="slots-group__label"><i class="fas fa-cloud-sun gold"></i> Afternoon</span><div class="slots-pill-grid" id="afternoonSlots"></div></div>
+                    <div class="slots-group"><span class="slots-group__label"><i class="fas fa-moon gold"></i> Late Afternoon</span><div class="slots-pill-grid" id="eveningSlots"></div></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="booking-section" id="detailsSection" style="display: none;">
+        <div class="container">
+            <div class="booking-section-heading">
+                <h2><i class="fas fa-user-check gold"></i> Your Details</h2>
+                <p>We'll send your confirmation straight to your email and WhatsApp.</p>
+            </div>
+            <div class="booking-details-wrap">
+                <div class="booking-details-form">
+                    <div class="form-group">
+                        <label for="clientName" class="form-label"><i class="fas fa-user gold"></i> Full Name *</label>
+                        <input type="text" id="clientName" class="form-control" placeholder="e.g. Lerato Mudau" required oninput="updateSummary()" />
+                    </div>
+                    <div class="form-group" style="margin-top: 16px;">
+                        <label for="clientPhone" class="form-label"><i class="fas fa-mobile-screen gold"></i> WhatsApp / Phone *</label>
+                        <input type="tel" id="clientPhone" class="form-control" placeholder="e.g. 081 234 5678" required oninput="updateSummary()" />
+                    </div>
+                    <div class="form-group" style="margin-top: 16px;">
+                        <label for="clientEmail" class="form-label"><i class="fas fa-envelope gold"></i> Email Address *</label>
+                        <input type="email" id="clientEmail" class="form-control" placeholder="you@example.com" required oninput="updateSummary()" />
+                    </div>
+                    <div class="form-group" style="margin-top: 16px;">
+                        <label for="bookingServiceSelect" class="form-label"><i class="fas fa-wand-magic-sparkles gold"></i> Treatment / Procedure *</label>
+                        <select id="bookingServiceSelect" class="form-control" onchange="updateSummary()">
+                            <option value="">Select a treatment</option>
+                            <optgroup label="Opening Specials">
+                                <option value="Body Slimming Special (20 Inj) - R600">Body Slimming Special (20 Inj) - R600</option>
+                                <option value="Body Slimming Special (40 Inj) - R850">Body Slimming Special (40 Inj) - R850</option>
+                                <option value="EMS Contouring (5 Sessions) - R1,000">EMS Contouring (5 Sessions) - R1,000</option>
+                                <option value="Vacuum Butt/Breast Lift (5) - R1,000">Vacuum Butt/Breast Lift (5) - R1,000</option>
+                                <option value="Clinical Dermaplaning - R300">Clinical Dermaplaning - R300</option>
+                                <option value="TCA Chemical Peel - R500">TCA Chemical Peel - R500</option>
+                                <option value="Organic Algae Herbal Peel - R650">Organic Algae Herbal Peel - R650</option>
+                                <option value="Microneedling Therapy (2) - R900">Microneedling Therapy (2) - R900</option>
+                            </optgroup>
+                            <optgroup label="Lemon Bottle and Weight Loss">
+                                <option value="Lemon Bottle (20 Inj) - R1,200">Lemon Bottle (20 Inj) - R1,200</option>
+                                <option value="Lemon Bottle (40 Inj) - R1,950">Lemon Bottle (40 Inj) - R1,950</option>
+                                <option value="SEMI (Semaglutide) 4-Week - R950">SEMI (Semaglutide) 4-Week - R950</option>
+                                <option value="TIRZEP / Mounjaro 4-Week - R1,650">TIRZEP / Mounjaro 4-Week - R1,650</option>
+                                <option value="RETRA (Retatrutide) 4-Week - R2,000">RETRA (Retatrutide) 4-Week - R2,000</option>
+                            </optgroup>
+                            <optgroup label="Skin and Laser">
+                                <option value="CO2 Stretchmark Laser - R700/area">CO2 Stretchmark Laser - R700/area</option>
+                                <option value="CO2 Vaginal Tightening - R1,000">CO2 Vaginal Tightening - R1,000</option>
+                            </optgroup>
+                            <optgroup label="Training">
+                                <option value="6-in-1 Cavitation Training - R7,500">6-in-1 Cavitation Training - R7,500</option>
+                                <option value="Aesthetics and Skincare Course">Aesthetics and Skincare Course</option>
+                            </optgroup>
+                        </select>
+                    </div>
+                    <div class="form-group" style="margin-top: 16px;">
+                        <label for="clientNotes" class="form-label"><i class="fas fa-comment-dots gold"></i> Special Notes (Optional)</label>
+                        <textarea id="clientNotes" class="form-control" rows="3" placeholder="e.g. Sensitive skin, first visit, etc." oninput="updateSummary()"></textarea>
+                    </div>
+                </div>
+                <div class="booking-fee-notice">
+                    <div class="booking-fee-notice__icon"><i class="fas fa-shield-halved"></i></div>
+                    <div class="booking-fee-notice__body">
+                        <h4>R200 Booking Fee</h4>
+                        <p>A <strong>R200 booking fee</strong> is required to secure your slot with Dr Randy Mudau. This fee is <strong>deducted from your treatment total</strong> when you arrive. Slots are only confirmed once the fee is paid.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="booking-section booking-section--alt" id="paymentSection" style="display: none;">
+        <div class="container">
+            <div class="booking-section-heading">
+                <h2><i class="fas fa-credit-card gold"></i> Confirm and Pay Booking Fee</h2>
+                <p>Review your appointment below, choose a payment method, and pay R200 to lock your slot.</p>
+            </div>
+            <div class="booking-payment-wrap">
+                <div class="payment-summary-card">
+                    <h3><i class="fas fa-receipt gold"></i> Appointment Summary</h3>
+                    <div class="summary-row"><span>Branch:</span><strong id="sumBranch">—</strong></div>
+                    <div class="summary-row"><span>Practitioner:</span><strong>Dr Randy Mudau</strong></div>
+                    <div class="summary-row"><span>Date:</span><strong id="sumDate">—</strong></div>
+                    <div class="summary-row"><span>Time:</span><strong id="sumTime">—</strong></div>
+                    <div class="summary-row"><span>Treatment:</span><strong id="sumService">—</strong></div>
+                    <div class="summary-row"><span>Client:</span><strong id="sumClient">—</strong></div>
+                    <div class="summary-row"><span>Phone:</span><strong id="sumPhone">—</strong></div>
+                    <div class="summary-row"><span>Email:</span><strong id="sumEmail">—</strong></div>
+                    <div class="summary-divider"></div>
+                    <div class="summary-row summary-row--total"><span>Booking Fee:</span><strong class="gold">R200</strong></div>
+                    <button type="button" class="btn-confirm-booking" onclick="confirmBooking()"><i class="fas fa-check-circle"></i> CONFIRM BOOKING</button>
+                    <button type="button" class="btn-whatsapp-confirm" onclick="confirmViaWhatsApp()"><i class="fab fa-whatsapp"></i> Send Details on WhatsApp</button>
+                    <p class="payment-note"><i class="fas fa-info-circle"></i> After selecting a payment method and confirming, your booking is registered and Dr Randy Mudau is notified.</p>
+                </div>
+                <div class="payment-info-card">
+                    <h3><i class="fas fa-wallet gold"></i> Select Payment Method</h3>
+                    <p class="payment-intro">Choose how you would like to pay the R200 booking fee:</p>
+                    <div class="payment-method-option" data-method="paynow" onclick="selectPaymentMethod('paynow')">
+                        <div class="payment-method-option__header">
+                            <div class="payment-method-option__icon"><i class="fas fa-credit-card"></i></div>
+                            <div class="payment-method-option__info"><strong>PayNow (Card Payment)</strong><span>Secure online card payment. Instant confirmation.</span></div>
+                            <div class="payment-method-option__radio"></div>
+                        </div>
+                        <div class="payment-method-option__body" id="paynowBody">
+                            <p>Click the button below to pay R200 securely via card. After payment, you will return here to confirm your booking.</p>
+                            <button type="button" class="btn-pay-now" onclick="event.stopPropagation(); openPaymentLink();"><i class="fas fa-lock"></i> PAY R200 NOW</button>
+                        </div>
+                    </div>
+                    <div class="payment-method-option" data-method="eft" onclick="selectPaymentMethod('eft')">
+                        <div class="payment-method-option__header">
+                            <div class="payment-method-option__icon"><i class="fas fa-building-columns"></i></div>
+                            <div class="payment-method-option__info"><strong>EFT / Bank Transfer</strong><span>Pay via internet banking or Capitec app.</span></div>
+                            <div class="payment-method-option__radio"></div>
+                        </div>
+                        <div class="payment-method-option__body" id="eftBody">
+                            <p>Use the banking details below. Send proof of payment to the branch WhatsApp.</p>
+                            <div class="bank-details-card">
+                                <div class="bank-details-row"><span>Bank:</span><strong>Capitec</strong></div>
+                                <div class="bank-details-row"><span>Account Name:</span><strong>Alabaster Health</strong></div>
+                                <div class="bank-details-row"><span>Account Number:</span><strong>1659931620</strong></div>
+                                <div class="bank-details-row"><span>Branch Code:</span><strong>953</strong></div>
+                                <div class="bank-details-row"><span>Account Type:</span><strong>Savings</strong></div>
+                                <div class="bank-details-row bank-details-row--highlight"><span>Reference:</span><strong id="eftReference">ALB-0000</strong></div>
+                            </div>
+                            <button type="button" class="btn-copy-details" onclick="event.stopPropagation(); copyBankDetails();"><i class="fas fa-copy"></i> COPY BANK DETAILS</button>
+                        </div>
+                    </div>
+                    <div class="payment-method-option" data-method="cash" onclick="selectPaymentMethod('cash')">
+                        <div class="payment-method-option__header">
+                            <div class="payment-method-option__icon"><i class="fas fa-money-bill-wave"></i></div>
+                            <div class="payment-method-option__info"><strong>Cash at Clinic</strong><span>Pay R200 on arrival at your selected branch.</span></div>
+                            <div class="payment-method-option__radio"></div>
+                        </div>
+                        <div class="payment-method-option__body" id="cashBody">
+                            <p>Your slot is held for <strong>24 hours</strong> after booking. Please arrive 10 minutes early and bring the exact R200 booking fee in cash. This fee is deducted from your treatment total.</p>
+                        </div>
+                    </div>
+                    <div class="payment-guarantee">
+                        <i class="fas fa-shield-alt"></i>
+                        <p><strong>100% Secure.</strong> Your R200 booking fee is fully deducted from your treatment total when you arrive.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="booking-confirm-modal" id="confirmModal" role="dialog" aria-modal="true" style="display: none;">
+        <div class="booking-confirm-modal__backdrop" onclick="closeConfirmModal()"></div>
+        <div class="booking-confirm-modal__content">
+            <button class="booking-confirm-modal__close" onclick="closeConfirmModal()" aria-label="Close"><i class="fas fa-times"></i></button>
+            <div class="confirm-success-icon"><i class="fas fa-check"></i></div>
+            <h2>Booking Received</h2>
+            <p>Your appointment with <strong>Dr Randy Mudau</strong> has been submitted.</p>
+            <div class="confirm-details">
+                <p><strong>Reference:</strong> <span class="gold" id="confirmRef">ALB-0000</span></p>
+                <p><strong>Branch:</strong> <span id="confirmBranch">—</span></p>
+                <p><strong>Date and Time:</strong> <span id="confirmDateTime">—</span></p>
+                <p><strong>Payment Method:</strong> <span id="confirmPayment">—</span></p>
+                <p><strong>Booking Fee:</strong> <span class="gold">R200</span></p>
+            </div>
+            <a href="#" id="confirmWhatsAppBtn" target="_blank" class="btn btn--whatsapp" style="width: 100%;"><i class="fab fa-whatsapp"></i> Message The Branch On WhatsApp</a>
+            <button type="button" class="btn btn--outline btn--sm" onclick="closeConfirmModal()" style="width: 100%; margin-top: 10px; color: var(--navy); border-color: var(--navy);"><i class="fas fa-redo"></i> Book Another Appointment</button>
+            <p class="confirm-note">Keep this reference for your records. A confirmation email has been sent to you.</p>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__locations-bar">✦ Bedfordview · Benoni · Pretoria · Polokwane · Certified Practitioners · WhatsApp: 081 309 4084 ✦</div>
+
+            <div class="newsletter-section">
+                <div class="container">
+                    <div class="newsletter-inner">
+                        <div class="newsletter-text">
+                            <h3>Get <span>10% Off</span> Your First Order</h3>
+                            <p>Join the Alabaster family and get exclusive specials, new product drops, and treatment tips — straight to your inbox.</p>
+                        </div>
+                        <form class="newsletter-form">
+                            <input type="email" placeholder="Your email address" required />
+                            <button type="submit"><i class="fas fa-paper-plane"></i> Subscribe</button>
+                            <div class="newsletter-msg"></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer__inner">
+                <div class="footer__brand">
+                    <img src="image/logo.jpeg" alt="Alabaster Health & Aesthetics" class="footer__logo-image" />
+                    <div><div class="footer__brand-text">ALABASTER</div><p>Health &amp; Aesthetics — Premium treatments, real results.</p></div>
+                </div>
+                <div class="footer__links">
+                    <a href="index.html">Home</a><a href="about.html">About</a><a href="services.html">Services</a><a href="products.html">Products</a><a href="Blog.html">Blog</a><a href="Bookings.html">Bookings</a><a href="rewards.html">Rewards</a><a href="contact.html">Contact</a>
+                </div>
+                <div class="footer__social">
+                    <a href="https://wa.me/27813094084" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    <a href="https://www.tiktok.com/@alabaster_health_aesthetics" target="_blank" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                    <a href="https://www.instagram.com/alabaster_health_aesthetics" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.facebook.com" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p>&copy; 2026 Alabaster Health &amp; Aesthetics. All rights reserved.</p>
+                <p class="footer__ai">Alabaster Clinic &amp; Training College · Founded by Murendeni Mudau</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/cart.js"></script>
+    <script src="js/features.js"></script>
+    <script src="js/booking-email.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Alabaster Rewards · Loyalty Program</title>
+    <meta name="description" content="Earn points on every purchase at Alabaster Health & Aesthetics. Redeem for discounts on future orders and treatments." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+    <header class="header" id="header">
+        <div class="container header__inner">
+            <a href="index.html" class="logo">
+                <img src="image/logo.jpeg" alt="Alabaster Health & Aesthetics" class="logo__image" />
+                <div class="logo__text-group">
+                    <span class="logo__text">ALABASTER <span>✦</span></span>
+                    <span class="logo__sub">Health &amp; Aesthetics</span>
+                </div>
+            </a>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                <span class="nav-toggle__bar"></span>
+                <span class="nav-toggle__bar"></span>
+                <span class="nav-toggle__bar"></span>
+            </button>
+            <nav class="nav" id="nav">
+                <ul class="nav__list">
+                    <li><a href="index.html" class="nav__link">Home</a></li>
+                    <li><a href="about.html" class="nav__link">About</a></li>
+                    <li><a href="services.html" class="nav__link">Services</a></li>
+                    <li><a href="products.html" class="nav__link">Products</a></li>
+                    <li><a href="Blog.html" class="nav__link">Blog</a></li>
+                    <li><a href="Bookings.html" class="nav__link">Bookings</a></li>
+                    <li><a href="rewards.html" class="nav__link active">Rewards</a></li>
+                    <li><a href="contact.html" class="nav__link">Contact</a></li>
+                </ul>
+                <div class="header__actions">
+                    <button class="cart-toggle" id="cartToggle" aria-label="Open cart">
+                        <i class="fas fa-shopping-bag"></i>
+                        <span class="cart-count" style="display:none;">0</span>
+                    </button>
+                    <a href="Bookings.html" class="btn btn--whatsapp btn--sm nav__cta"><i class="fas fa-calendar-check"></i> Book Now</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <div class="cart-overlay" id="cartOverlay"></div>
+    <aside class="cart-drawer" id="cartDrawer" aria-label="Shopping cart">
+        <div class="cart-drawer__header">
+            <h3><i class="fas fa-shopping-bag"></i> Your Cart</h3>
+            <button class="cart-drawer__close" id="cartClose" aria-label="Close cart"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="cart-drawer__items"></div>
+        <div class="cart-drawer__footer">
+            <div class="cart-drawer__total"><span>Total</span><strong class="cart-drawer__total-amount">R0</strong></div>
+            <button class="btn btn--gold cart-drawer__checkout" style="width:100%;"><i class="fas fa-lock"></i> Proceed To Checkout</button>
+            <p class="cart-drawer__note"><i class="fas fa-info-circle"></i> Secure payment on the next page.</p>
+        </div>
+    </aside>
+
+    <!-- ============================================================
+         HERO WITH FLOATING COINS
+         ============================================================ -->
+    <section class="rewards-hero">
+        <div class="rewards-hero__coins" aria-hidden="true">
+            <span class="coin coin--1">★</span>
+            <span class="coin coin--2">◆</span>
+            <span class="coin coin--3">★</span>
+            <span class="coin coin--4">◆</span>
+            <span class="coin coin--5">★</span>
+            <span class="coin coin--6">◆</span>
+        </div>
+        <div class="container rewards-hero__inner">
+            <span class="section-heading__tag" style="background: rgba(212,175,55,0.2); color: var(--gold-light);">✦ Alabaster Rewards</span>
+            <h1 class="section-heading__title" style="color: var(--white); margin-top: 12px;">Earn Points. <span>Redeem Rewards.</span></h1>
+            <p class="section-heading__text" style="color: rgba(255,255,255,0.85); max-width: 640px; margin: 0 auto;">Every R1 spent earns you 1 loyalty point. Collect 100 points and redeem them for R100 off your next purchase or treatment.</p>
+        </div>
+    </section>
+
+    <!-- ============================================================
+         MEMBERSHIP CARD + PROGRESS
+         ============================================================ -->
+    <section class="rewards-section">
+        <div class="container">
+            <div class="membership-card" id="membershipCard">
+                <div class="membership-card__shine"></div>
+                <div class="membership-card__top">
+                    <div class="membership-card__brand">
+                        <span class="membership-card__logo">✦</span>
+                        <div>
+                            <strong>ALABASTER</strong>
+                            <small>Rewards Member</small>
+                        </div>
+                    </div>
+                    <span class="membership-card__tier" id="memberTierBadge">Bronze</span>
+                </div>
+                <div class="membership-card__bottom">
+                    <div class="membership-card__stat">
+                        <span class="membership-card__label">Points Balance</span>
+                        <strong class="membership-card__value loyalty-points">0</strong>
+                    </div>
+                    <div class="membership-card__stat">
+                        <span class="membership-card__label">Available Credit</span>
+                        <strong class="membership-card__value loyalty-credit">R0</strong>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tier Progress Bar -->
+            <div class="tier-progress">
+                <div class="tier-progress__header">
+                    <span>Progress to next tier</span>
+                    <strong id="tierProgressText">0% to Silver</strong>
+                </div>
+                <div class="tier-progress__bar">
+                    <div class="tier-progress__fill" id="tierProgressFill"></div>
+                </div>
+                <p class="tier-progress__hint" id="tierProgressHint">Earn 1,000 points to reach Silver tier and unlock 1.25x points!</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+         HOW TO EARN — ACTION TILES
+         ============================================================ -->
+    <section class="rewards-section rewards-section--dark">
+        <div class="container">
+            <div class="section-heading">
+                <span class="section-heading__tag">✦ Ways To Earn</span>
+                <h2 class="section-heading__title" style="color: var(--white);">3 Easy Ways To <span>Stack Points</span></h2>
+            </div>
+            <div class="earn-tiles">
+                <a href="products.html" class="earn-tile">
+                    <div class="earn-tile__icon"><i class="fas fa-shopping-bag"></i></div>
+                    <h3>Shop Products</h3>
+                    <p>Every R1 spent = 1 point</p>
+                    <span class="earn-tile__cta">Shop Now <i class="fas fa-arrow-right"></i></span>
+                </a>
+                <a href="Bookings.html" class="earn-tile">
+                    <div class="earn-tile__icon"><i class="fas fa-calendar-check"></i></div>
+                    <h3>Book A Treatment</h3>
+                    <p>Earn points on every booking</p>
+                    <span class="earn-tile__cta">Book Now <i class="fas fa-arrow-right"></i></span>
+                </a>
+                <a href="https://wa.me/27813094084?text=Hi%20Alabaster%2C%20I'd%20like%20to%20refer%20a%20friend%20to%20earn%20rewards!" target="_blank" class="earn-tile">
+                    <div class="earn-tile__icon"><i class="fas fa-user-plus"></i></div>
+                    <h3>Refer A Friend</h3>
+                    <p>Get 500 bonus points</p>
+                    <span class="earn-tile__cta">Refer Now <i class="fas fa-arrow-right"></i></span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+         TIERS
+         ============================================================ -->
+    <section class="rewards-section">
+        <div class="container">
+            <div class="section-heading">
+                <span class="section-heading__tag">✦ Membership Levels</span>
+                <h2 class="section-heading__title">Unlock Exclusive <span>Tiers</span></h2>
+                <p class="section-heading__text">The more you shop, the more rewards you unlock. Climb the tiers to enjoy bigger and better benefits.</p>
+            </div>
+            <div class="tiers-grid">
+                <div class="tier-card-v2">
+                    <div class="tier-card-v2__ribbon">Current</div>
+                    <div class="tier-card-v2__medal"></div>
+                    <h3>Bronze</h3>
+                    <p class="tier-card-v2__range">0 – 999 points</p>
+                    <ul>
+                        <li><i class="fas fa-check-circle"></i> 1 point per R1 spent</li>
+                        <li><i class="fas fa-check-circle"></i> Birthday treat</li>
+                        <li><i class="fas fa-check-circle"></i> Newsletter specials</li>
+                    </ul>
+                </div>
+                <div class="tier-card-v2 tier-card-v2--silver">
+                    <div class="tier-card-v2__medal"></div>
+                    <h3>Silver</h3>
+                    <p class="tier-card-v2__range">1,000 – 4,999 points</p>
+                    <ul>
+                        <li><i class="fas fa-check-circle"></i> <strong>1.25x</strong> points per R1</li>
+                        <li><i class="fas fa-check-circle"></i> Priority booking slots</li>
+                        <li><i class="fas fa-check-circle"></i> 5% off every order</li>
+                        <li><i class="fas fa-check-circle"></i> All Bronze benefits</li>
+                    </ul>
+                </div>
+                <div class="tier-card-v2 tier-card-v2--gold">
+                    <div class="tier-card-v2__medal"></div>
+                    <h3>Gold</h3>
+                    <p class="tier-card-v2__range">5,000+ points</p>
+                    <ul>
+                        <li><i class="fas fa-check-circle"></i> <strong>1.5x</strong> points per R1</li>
+                        <li><i class="fas fa-check-circle"></i> Free express delivery</li>
+                        <li><i class="fas fa-check-circle"></i> 10% off every order</li>
+                        <li><i class="fas fa-check-circle"></i> VIP-only launches</li>
+                        <li><i class="fas fa-check-circle"></i> All Silver benefits</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+         HISTORY
+         ============================================================ -->
+    <section class="rewards-section rewards-section--dark">
+        <div class="container">
+            <div class="section-heading">
+                <span class="section-heading__tag">✦ Your Activity</span>
+                <h2 class="section-heading__title" style="color: var(--white);">Points <span>History</span></h2>
+                <p class="section-heading__text" style="color: rgba(255,255,255,0.7);">Every point you earn and every reward you redeem — all in one place.</p>
+            </div>
+            <div id="loyaltyHistory" class="history-list">
+                <div class="history-list__empty">
+                    <i class="fas fa-receipt"></i>
+                    <p>No points activity yet. Start shopping to earn rewards!</p>
+                    <a href="products.html" class="btn btn--gold btn--sm">Browse Products</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+         FINAL CTA
+         ============================================================ -->
+    <section class="rewards-cta-v2">
+        <div class="container">
+            <div class="rewards-cta-v2__inner">
+                <div class="rewards-cta-v2__glow"></div>
+                <span class="rewards-cta-v2__star">✦</span>
+                <h2>Ready to earn <span>more points?</span></h2>
+                <p>Every purchase, every booking, and every referral gets you closer to your next reward.</p>
+                <div class="rewards-cta-v2__buttons">
+                    <a href="products.html" class="btn btn--gold"><i class="fas fa-shopping-bag"></i> Shop Now</a>
+                    <a href="Bookings.html" class="btn btn--outline"><i class="fas fa-calendar-check"></i> Book A Treatment</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__locations-bar">✦ Bedfordview · Benoni · Pretoria · Polokwane · Certified Practitioners · WhatsApp: 081 309 4084 ✦</div>
+
+            <div class="newsletter-section">
+                <div class="container">
+                    <div class="newsletter-inner">
+                        <div class="newsletter-text">
+                            <h3>Get <span>10% Off</span> Your First Order</h3>
+                            <p>Join the Alabaster family and get exclusive specials, new product drops, and treatment tips — straight to your inbox.</p>
+                        </div>
+                        <form class="newsletter-form">
+                            <input type="email" placeholder="Your email address" required />
+                            <button type="submit"><i class="fas fa-paper-plane"></i> Subscribe</button>
+                            <div class="newsletter-msg"></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer__inner">
+                <div class="footer__brand">
+                    <img src="image/logo.jpeg" alt="Alabaster Health & Aesthetics" class="footer__logo-image" />
+                    <div><div class="footer__brand-text">ALABASTER</div><p>Health &amp; Aesthetics — Premium treatments, real results.</p></div>
+                </div>
+                <div class="footer__links">
+                    <a href="index.html">Home</a><a href="about.html">About</a><a href="services.html">Services</a><a href="products.html">Products</a><a href="Blog.html">Blog</a><a href="Bookings.html">Bookings</a><a href="rewards.html">Rewards</a><a href="contact.html">Contact</a>
+                </div>
+                <div class="footer__social">
+                    <a href="https://wa.me/27813094084" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    <a href="https://www.tiktok.com/@alabaster_health_aesthetics" target="_blank" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                    <a href="https://www.instagram.com/alabaster_health_aesthetics" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.facebook.com" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p>&copy; 2026 Alabaster Health &amp; Aesthetics. All rights reserved.</p>
+                <p class="footer__ai">Alabaster Clinic &amp; Training College · Founded by Murendeni Mudau</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/cart.js"></script>
+    <script src="js/features.js"></script>
+    <script src="js/script.js"></script>
+    <script>
+        /* Render loyalty history + membership tier + progress bar */
+        (function renderRewards() {
+            const data = getLoyalty();
+            const points = data.points || 0;
+
+            /* ---- Tier + Progress ---- */
+            const tierBadge = document.getElementById('memberTierBadge');
+            const progressFill = document.getElementById('tierProgressFill');
+            const progressText = document.getElementById('tierProgressText');
+            const progressHint = document.getElementById('tierProgressHint');
+
+            let tier, progressPct, nextTier, pointsNeeded;
+            if (points >= 5000) {
+                tier = 'Gold '; progressPct = 100; nextTier = 'Max Tier'; pointsNeeded = 0;
+            } else if (points >= 1000) {
+                tier = 'Silver '; progressPct = ((points - 1000) / 4000) * 100;
+                nextTier = 'Gold'; pointsNeeded = 5000 - points;
+            } else {
+                tier = 'Bronze '; progressPct = (points / 1000) * 100;
+                nextTier = 'Silver'; pointsNeeded = 1000 - points;
+            }
+
+            if (tierBadge) tierBadge.textContent = tier;
+            if (progressFill) progressFill.style.width = Math.min(progressPct, 100) + '%';
+            if (progressText) progressText.textContent = Math.round(progressPct) + '% to ' + nextTier;
+            if (progressHint) {
+                progressHint.textContent = pointsNeeded > 0
+                    ? `Earn ${pointsNeeded.toLocaleString()} more points to unlock ${nextTier} tier!`
+                    : 'Congratulations! You have reached the highest tier.';
+            }
+
+            /* ---- History ---- */
+            const list = document.getElementById('loyaltyHistory');
+            if (!list) return;
+            if (!data.history || data.history.length === 0) return;
+
+            list.innerHTML = data.history.slice().reverse().map(item => `
+                <div class="history-row ${item.points > 0 ? 'history-row--earn' : 'history-row--redeem'}">
+                    <div class="history-row__icon">
+                        <i class="fas fa-${item.points > 0 ? 'plus' : 'gift'}"></i>
+                    </div>
+                    <div class="history-row__info">
+                        <strong>${item.reason}</strong>
+                        <span>${new Date(item.date).toLocaleDateString('en-ZA', { day: 'numeric', month: 'short', year: 'numeric' })}</span>
+                    </div>
+                    <div class="history-row__points ${item.points > 0 ? 'positive' : 'negative'}">
+                        ${item.points > 0 ? '+' : ''}${item.points}
+                    </div>
+                </div>
+            `).join('');
+        })();
+    </script>
+</body>
+</html>
